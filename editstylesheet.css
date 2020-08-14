@@ -1,0 +1,303 @@
+html, body{
+    scroll-behavior: smooth;
+}
+#header{
+    height: 50px;
+    display: none;
+}
+#navbar{
+    background-color: #222831;
+    position: fixed; 
+    top: 0; 
+    width: 100%;
+    height: 50px;
+    display: grid;
+    font-size: 19px;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    grid-column-gap: 20px;
+    justify-content: center;
+    text-align: center;
+    
+}
+#navbar a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+a:link, a:visited , a:active{
+    color: #ffffff;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+.sticky + .content {
+    padding-top: 60px;
+  }
+.sectionTitle{
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+
+.section{
+    padding-top: 75px;
+    padding-bottom: 100px;
+    display: none;
+}
+.section div{
+    justify-content: center;
+}
+.sectionTitle{
+    text-align: center;
+    font-size: 50px;
+}
+#aboutMe{
+    background-color: #222831;
+    color: #eeeeee;
+    background-image: url(882.jpg);
+    background-size: 100% auto;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+}
+
+#aboutMe .container{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-row-gap: 50px;
+}
+#aboutMeInfo img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+#aboutMe div div{
+    display: grid;
+    grid-template-rows: auto auto;
+    width: 800px;
+}
+#aboutMeInfo{
+    padding-left: 50px;
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 300px auto auto;
+    grid-column-gap: 10px;
+    font-size: 20px;
+}
+
+#aboutMeInfo p{
+    padding-top: 50px;
+}
+
+#links{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 20px;
+}
+#education{
+    color: #262626;
+    height: auto;
+    background-color: #eeeeee;
+}
+#school{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap:200px;
+    grid-row-gap: 100px;
+}
+#school div{
+    font-size: 24px;
+    text-align: center;
+}
+#school img{
+    width: 200px;
+    height: 200px;
+}
+
+#organizations{
+    height: auto;
+    color: #222831;
+    background-color: #eeeeee;
+    font-size: 24px;
+ }
+ .orgContainer{
+     display: grid;
+     grid-row-gap: 20px;
+     padding-top: 50px;
+ }
+ #org img{
+     width: 200px;
+     height: 200px;
+ }
+ #org div{
+   text-align: center;
+ }
+ 
+#org img{
+    width: 200px;
+    height: 200px;
+}
+#org div{
+  text-align: center;
+}
+
+#org{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 70px;
+}
+.orgInfo{
+    padding-top: 50px;
+}
+.orgInfo span{
+    display: block;
+    font-size: 23px;
+}
+.orgName{
+    font-family: sans-serif;
+    font-weight: 700;
+}
+.org img{
+    width: 300px;
+    height: 300px;
+    background-color: #ffffff;
+    border-radius: 100%;
+}
+
+#works{
+  
+    justify-content: center;
+    background-color: #393e46;
+    background-image: url(working.jpg);
+    background-size:120% auto;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+
+}
+#works div{
+    justify-content: center;
+}
+#works div .sectionTitle{
+    color: #e9eade;
+}
+#projectContainer{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-auto-rows: max-content;
+    padding-top: 50px;
+    grid-column-gap: 100px;
+    grid-row-gap: 100px;
+    width: 100%;
+    align-items: center;
+}
+
+#projectContainer div{
+    color: #262626;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px 20px 20px 20px;
+    display: block;
+    width: 300px;
+    height: 250px;
+    background-color: #ececec;
+}
+#projectContainer div:hover{
+    transition-timing-function: ease;
+    transition-duration: 0.3s;
+    transform: scale(1.1);
+}
+#contactInfo{
+    background-color: #393e46;
+    color: #ececec;
+}
+.contactDetails{
+    display: grid;
+    grid-auto-rows: max-content;
+    text-align: center;
+    justify-content: center;
+    font-size: 23px;
+}
+
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+
+#educForm, #orgForm, #projForm{
+    display: none;
+}
+
+.form-container {
+    height: min-content;
+    max-width: 300px;
+    padding: 10px;
+    background-color: white; 
+
+}
+.del{
+    padding: 5px 5px 5px 5px;
+    font-weight: 600;
+    color: #ffdbc5;
+    border-radius: 10%;
+    background-color: #fa1616;
+    border-color: #900d0d;
+}
+
+.add, #save{
+    padding: 5px 5px 5px 5px;
+    background-color: #52de97;   
+    font-weight: 600;
+    border-radius: 15%; 
+}
+#save{
+    width: 70px;
+}
+
+      
+form {
+    padding-top: 200px; 
+    border: 3px solid #f1f1f1; 
+    height: 600px;
+    width: 100%;
+} 
+
+  
+input[type=text], 
+input[type=password] { 
+    width: 100%; 
+    padding: 12px 20px; 
+    margin: 8px 0; 
+    display: inline-block; 
+    border: 1px solid #ccc; 
+    box-sizing: border-box; 
+} 
+
+#pDesc{
+    height: 100px;
+}
+  
+button:hover { 
+    opacity: 0.8; 
+} 
+  
+span.psw { 
+    float: right; 
+    padding-top: 16px; 
+} 
+  
+    
