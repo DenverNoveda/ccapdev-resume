@@ -77,11 +77,10 @@ var firebaseConfig = {
    
         }
         function loadLinks(doc){
-            var links = document.getElementById("links")
-
+          
             var data = doc.data();
             var github = data.github;
-            var twitter = data.twitter;
+            var facebook = data.facebook;
             var linkedin = data.linkedin;
             
             var par1 = document.createElement("p");
@@ -89,7 +88,7 @@ var firebaseConfig = {
             var par3 = document.createElement("p");
             
             var lGit = document.getElementById("lGithub");
-            var lTwitter = document.getElementById("lTwitter");
+            var lFacebook = document.getElementById("lFacebook");
             var lLinkedin = document.getElementById("lLinkedin");
 
             par1.setAttribute("contenteditable", "true");
@@ -97,15 +96,15 @@ var firebaseConfig = {
             par3.setAttribute("contenteditable", "true");
           
             par1.setAttribute("id", "github");
-            par2.setAttribute("id", "twitter");
+            par2.setAttribute("id", "facebook");
             par3.setAttribute("id", "linkedin");
     
             par1.innerHTML = github;
-            par2.innerHTML = twitter;
+            par2.innerHTML =facebook;
             par3.innerHTML = linkedin; 
 
             lGit.appendChild(par1);
-            lTwitter.appendChild(par2);
+            lFacebook.appendChild(par2);
             lLinkedin.appendChild(par3);
         }
         function loadEduc(doc){
@@ -234,7 +233,7 @@ var firebaseConfig = {
         }
         function editAboutMe(){
             var lgithub = document.getElementById("github").innerHTML;
-            var ltwitter = document.getElementById("twitter").innerHTML;
+            var lFacebook = document.getElementById("facebook").innerHTML;
             var llinkedin = document.getElementById("linkedin").innerHTML;
             var lintro = document.getElementById("intro").innerHTML;
 
@@ -243,7 +242,7 @@ var firebaseConfig = {
             })
             db.collection("others").doc("links").update({
                 github : lgithub,
-                twitter : ltwitter,
+                facebook: lFacebook,
                 linkedin : llinkedin
             })       
             var message = document.getElementById("sMessage");

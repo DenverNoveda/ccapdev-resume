@@ -18,30 +18,19 @@ var firebaseConfig = {
         console.log("Document details successfully read!");
         
         var lGit = document.getElementById("github");
-        var lTwitter = document.getElementById("twitter");
+        var lFacebook = document.getElementById("facebook");
         var lLinkedin = document.getElementById("linkedin");
 
         var data = doc.data();
         var github = data.github;
-        var twitter = data.twitter;
+        var facebook = data.facebook;
         var linkedin = data.linkedin;
         
-        var par1 = document.createElement("a");
-        var par2 = document.createElement("a");
-        var par3 = document.createElement("a");
-        
-        par1.innerHTML = github;
-        par2.innerHTML = twitter;
-        par3.innerHTML = linkedin; 
-        
-        par1.setAttribute("href", github);
-        par2.setAttribute("href", twitter);
-        par3.setAttribute("href", linkedin);
-       
     
-        lGit.appendChild(par1);
-        lTwitter.appendChild(par2);
-        lLinkedin.appendChild(par3);
+        lGit.setAttribute("href", github);
+        lFacebook.setAttribute("href", facebook);
+        lLinkedin.setAttribute("href", linkedin);
+       
     });
     db.collection("educations").get().then(function(snapshot){
         snapshot.forEach(function(doc){
@@ -145,11 +134,12 @@ var firebaseConfig = {
                 par3.innerHTML = yearStart;
 
                 
+                par1.appendChild(par2);
+                par1.appendChild(par3);
                 
                 container.appendChild(oIcon);
                 container.appendChild(par1);
-                container.appendChild(par2);
-                container.appendChild(par3);
+               
                 parent1.appendChild(container);
             })
         });
