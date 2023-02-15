@@ -1,0 +1,19 @@
+{
+  "name": "ccapdev-resume",
+  "version": "1.0.0",
+  "description": "A simple resume website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DenverNoveda/ccapdev-resume.git"
+  },
+  "author": "Denver M. Noveda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DenverNoveda/ccapdev-resume/issues"
+  },
+  "homepage": "https://github.com/DenverNoveda/ccapdev-resume#readme"
+}
